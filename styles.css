@@ -1,0 +1,687 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a1931;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #152642;
+    border-bottom: 2px solid #1e5fce;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.btn {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-register {
+    background-color: #1e5fce;
+}
+
+.btn-register:hover {
+    background-color: #2d7aff;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #0a1931 0%, #152642 100%);
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #1e5fce;
+}
+
+/* Glass Block Sections */
+.glass-block {
+    background: rgba(21, 38, 66, 0.8);
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 10px;
+    border: 1px solid #1e5fce;
+    backdrop-filter: blur(10px);
+}
+
+.glass-block h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #1e5fce;
+    padding-bottom: 0.5rem;
+}
+
+.glass-block ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.glass-block li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.glass-block li:before {
+    content: "•";
+    color: #1e5fce;
+    position: absolute;
+    left: 0;
+}
+
+/* Table Section */
+.table-section {
+    padding: 2rem;
+    background-color: #0f2244;
+}
+
+.table-section h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #152642;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #1e5fce;
+}
+
+th {
+    background-color: #1e5fce;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(30, 95, 206, 0.1);
+}
+
+tr:hover {
+    background-color: rgba(30, 95, 206, 0.2);
+}
+
+/* Payment Methods */
+.payment-methods {
+    list-style: none;
+    padding: 0;
+}
+
+.payment-methods li {
+    background-color: #152642;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #1e5fce;
+}
+
+.payment-methods strong {
+    color: #2d7aff;
+}
+
+/* Slot List */
+.slot-list {
+    list-style: none;
+    padding: 0;
+}
+
+.slot-list li {
+    background-color: #152642;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #1e5fce;
+}
+
+.slot-list strong {
+    color: #2d7aff;
+}
+
+/* Promo Container */
+.promo-container {
+    background: rgba(30, 95, 206, 0.2);
+    border: 2px solid #1e5fce !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.promo-code {
+    font-weight: bold;
+    color: #ffd700 !important;
+    margin-right: 15px !important;
+    font-size: 1.2rem;
+}
+
+.copy-btn {
+    border: 2px solid #1e5fce !important;
+    background: transparent !important;
+    color: #30d5c8 !important;
+    padding: 8px 16px !important;
+    border-radius: 5px !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background-color: #1e5fce !important;
+    color: #ffffff !important;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #152642;
+    margin-top: 2rem;
+    border-top: 2px solid #1e5fce;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #1e5fce;
+    padding: 0.7rem 1rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 2px solid #2d7aff;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #2d7aff;
+    transform: translateY(-3px);
+}
+
+/* Action Buttons */
+.btn-action {
+    background-color: #1e5fce;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+.btn-action:hover {
+    background-color: #2d7aff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(30, 95, 206, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .glass-block, .table-section {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
+}
+
+/* Additional utility classes */
+.text-accent {
+    color: #2d7aff;
+}
+
+.bg-dark-blue {
+    background-color: #0a1931;
+}
+
+.bg-medium-blue {
+    background-color: #152642;
+}
+
+.border-accent {
+    border-color: #1e5fce;
+}
+
+/* Стили для страницы отзывов */
+.testimonial-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.review-card {
+    background: rgba(21, 38, 66, 0.9);
+    border: 1px solid #1e5fce;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.reviewer-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 2px solid #1e5fce;
+}
+
+.rating {
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.review-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #8c9db5;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.slider-controls button {
+    background: #1e5fce;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(21, 38, 66, 0.8);
+    border-radius: 10px;
+    border: 1px solid #1e5fce;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2d7aff;
+    margin-bottom: 0.5rem;
+}
+
+/* Стили для страницы бонусов */
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.rule-category {
+    background: rgba(21, 38, 66, 0.8);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #1e5fce;
+}
+
+.rule-category h3 {
+    color: #2d7aff;
+    margin-bottom: 1rem;
+}
+
+.wagering-info, .important-notes {
+    background: rgba(21, 38, 66, 0.8);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    border: 1px solid #1e5fce;
+}
+
+.example {
+    background: rgba(30, 95, 206, 0.2);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Стили для страницы поддержки */
+.channels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.channel-card {
+    background: rgba(21, 38, 66, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #1e5fce;
+    transition: transform 0.3s ease;
+}
+
+.channel-card:hover {
+    transform: translateY(-5px);
+}
+
+.channel-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.channel-info {
+    margin: 1rem 0;
+}
+
+.availability, .response-time {
+    display: block;
+    font-size: 0.9rem;
+    color: #8c9db5;
+}
+
+.chat-btn, .tg-btn, .email-btn {
+    display: inline-block;
+    background: #1e5fce;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.faq-item {
+    background: rgba(21, 38, 66, 0.8);
+    border: 1px solid #1e5fce;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    padding: 1.5rem;
+    text-align: left;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 1.5rem 1.5rem;
+    color: #e0e0e0;
+}
+
+.security-content {
+    background: rgba(21, 38, 66, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #1e5fce;
+}
+
+.license-info {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(30, 95, 206, 0.2);
+    border-radius: 5px;
+}
+
+/* Навигация */
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background: #1e5fce;
+    color: white;
+}
+
+/* =================== LAYOUT POLISH v2 (NO SEO/LINK CHANGES) =================== */
+
+/* Container / spacing */
+main{
+  max-width: var(--container, 1080px);
+  margin: 0 auto;
+  padding: 0 14px;
+}
+.hero, .glass-block, .table-section, .support-channels, .faq-section, .stats-section,
+.testimonial-slider, .bonus-rules, .security-info{
+  margin: 18px auto !important;
+}
+.hero{ padding: 26px 18px !important; }
+.glass-block, .table-section, .support-channels, .faq-section, .bonus-rules, .security-info{
+  padding: 22px 18px !important;
+}
+.hero p, .glass-block p, .table-section p{
+  margin: 10px auto;
+  max-width: 920px;
+}
+
+/* Header/logo: prevent squish */
+.header{ gap: 12px; }
+.logo{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.logo img{
+  width: auto !important;
+  height: auto !important;
+  max-height: 56px !important;
+  max-width: 220px !important;
+  object-fit: contain !important;
+}
+
+/* Buttons: keep one-line on desktop, allow wrap on small screens */
+.btn{
+  line-height: 1.15;
+  max-width: 100%;
+}
+@media (min-width: 520px){
+  .btn{ white-space: nowrap; }
+}
+@media (max-width: 519px){
+  .btn{ white-space: normal; }
+}
+
+/* Bonus rules grid: equal heights + nicer list spacing */
+.rules-grid{
+  gap: 16px !important;
+}
+.rule-category, .wagering-info, .important-notes, .security-content{
+  height: 100%;
+}
+.rule-category ul{ margin-top: 10px; padding-left: 18px; }
+.rule-category li{ margin: 8px 0; }
+
+/* Tables: never break layout */
+table{
+  display:block;
+  width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling: touch;
+}
+th, td{ white-space: nowrap; }
+@media (max-width: 768px){
+  th, td{ white-space: normal; }
+}
+
+/* Support page: cards/grid */
+.channels-grid{
+  display:grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 16px !important;
+  margin-top: 16px !important;
+}
+.channel-card{
+  padding: 18px !important;
+}
+.channel-info h3{ margin: 0 0 8px 0; }
+.availability, .response-time{
+  display:block;
+  margin-top: 8px;
+  opacity: .85;
+}
+
+/* FAQ: clean accordion look */
+.faq-list{
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+.faq-item{ border-radius: 16px !important; }
+.faq-question{
+  padding: 16px 16px !important;
+  font-size: 1.05rem !important;
+  line-height: 1.3;
+  gap: 12px;
+}
+.faq-question span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  flex: 0 0 auto;
+}
+.faq-answer{
+  padding: 0 16px 16px !important;
+}
+.faq-answer p{ margin: 10px 0 8px; }
+.faq-answer ul{ margin-top: 8px; padding-left: 18px; }
+.faq-answer li{ margin: 6px 0; }
+
+/* Reviews slider: ADD missing layout styles to avoid overlap */
+.testimonial-slider{ padding: 0 0 6px; }
+.slider-container{
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.slide{ display: none; }
+.slide.active{ display: block; }
+.review-card{ width: 100%; }
+.reviewer-info{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+/* Hide avatars as requested */
+.reviewer-info img{ display:none !important; }
+
+/* Slider controls: centered and consistent */
+.slider-controls{
+  display:flex;
+  justify-content:center;
+  gap: 12px;
+  margin-top: 14px;
+}
+.prev-btn, .next-btn{
+  border-radius: 12px !important;
+}
+
+/* Mobile: breathing room and header layout */
+@media (max-width: 768px){
+  main{ padding: 0 10px; }
+  .header{ flex-direction: column; align-items: stretch; }
+  nav{ justify-content:center; flex-wrap: wrap; }
+  .hero{ padding: 20px 14px !important; }
+}

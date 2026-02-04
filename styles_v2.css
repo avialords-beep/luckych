@@ -1,0 +1,604 @@
+/* ============ Lucky Bear Theme v2 (visual redesign, same HTML/classes) ============ */
+:root{
+  --bg-0: #07060f;
+  --bg-1: #0c1022;
+  --card: rgba(255,255,255,.06);
+  --card-2: rgba(255,255,255,.08);
+  --text: #eef1ff;
+  --muted: rgba(238,241,255,.72);
+  --border: rgba(255,255,255,.12);
+  --accent: #ff4d8d;
+  --accent-2:#6c5cff;
+  --accent-3:#22d3ee;
+  --shadow: 0 18px 60px rgba(0,0,0,.45);
+  --radius: 18px;
+  --radius-sm: 12px;
+  --container: 1080px;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 15% 10%, rgba(108,92,255,.26), transparent 55%),
+    radial-gradient(900px 520px at 85% 20%, rgba(34,211,238,.20), transparent 55%),
+    radial-gradient(900px 520px at 50% 95%, rgba(255,77,141,.18), transparent 55%),
+    linear-gradient(180deg, var(--bg-0), var(--bg-1));
+  color: var(--text);
+  line-height: 1.65;
+}
+
+img{ max-width:100%; height:auto; display:block; }
+
+/* Layout helpers (no HTML change required) */
+main{
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.hero, .glass-block, .table-section, .testimonial-slider, .support-channels, .faq-section, .security-info, .bonus-rules{
+  width: 100%;
+}
+
+/* Header */
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: rgba(10, 10, 18, .65);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+}
+.logo img{
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* Nav */
+nav{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items:center;
+}
+nav a{
+  color: var(--muted);
+  text-decoration:none;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease, color .15s ease;
+}
+nav a:hover{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.10);
+  transform: translateY(-1px);
+  color: var(--text);
+}
+nav a.active{
+  color: var(--text);
+  background: linear-gradient(90deg, rgba(108,92,255,.35), rgba(255,77,141,.28));
+  border-color: rgba(255,255,255,.14);
+}
+
+/* Buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  text-decoration:none;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: .2px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  box-shadow: 0 12px 36px rgba(0,0,0,.25);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
+}
+.btn:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.22);
+  box-shadow: 0 16px 42px rgba(0,0,0,.35);
+}
+.btn-register{
+  background: linear-gradient(90deg, rgba(108,92,255,.95), rgba(255,77,141,.92));
+  border-color: rgba(255,255,255,.18);
+}
+.btn-register:hover{
+  background: linear-gradient(90deg, rgba(108,92,255,1), rgba(255,77,141,1));
+}
+
+/* Hero */
+.hero{
+  margin: 18px auto;
+  padding: 26px 18px;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(1200px 250px at 50% 0%, rgba(255,255,255,.08), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.hero h1{
+  font-size: clamp(24px, 2.7vw, 38px);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.hero p{
+  color: var(--muted);
+  max-width: 820px;
+  margin: 0 auto 14px;
+}
+.hero img{
+  margin: 16px auto 0;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 18px 60px rgba(0,0,0,.35);
+}
+
+/* “Glass blocks” */
+.glass-block{
+  margin: 18px auto;
+  padding: 24px 18px;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.glass-block h2{
+  font-size: clamp(18px, 2.1vw, 26px);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+.glass-block p{ color: var(--muted); }
+.glass-block ul, .glass-block ol{ max-width: 900px; margin: 10px auto 0; text-align:left; }
+.glass-block li{ margin: 10px 0; color: var(--muted); }
+
+/* Tables section */
+.table-section{
+  margin: 18px auto;
+  padding: 24px 18px;
+  border-radius: var(--radius);
+  background: var(--card-2);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.table-section h2{
+  text-align:center;
+  margin-bottom: 12px;
+}
+table{
+  width:100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.18);
+}
+th, td{
+  padding: 14px 14px;
+  text-align:left;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+th{
+  background: linear-gradient(90deg, rgba(108,92,255,.45), rgba(34,211,238,.28));
+  color: var(--text);
+}
+tr:nth-child(even) td{ background: rgba(255,255,255,.03); }
+tr:hover td{ background: rgba(255,255,255,.06); }
+
+/* Lists styled like cards */
+.slot-list, .payment-methods{ list-style:none; padding:0; margin: 14px auto 0; max-width: 920px; }
+.slot-list li, .payment-methods > li{
+  background: rgba(0,0,0,.18);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  margin-bottom: 10px;
+}
+.slot-list strong, .payment-methods strong{
+  color: #ffd1e1;
+}
+
+/* Promo */
+.promo-container{
+  background: rgba(255,255,255,.06) !important;
+  border: 1px solid rgba(255,255,255,.16) !important;
+  border-radius: 999px !important;
+  padding: 10px 14px !important;
+}
+.promo-code{
+  color: #ffe07a !important;
+  font-size: 1.1rem;
+}
+.copy-btn{
+  border-radius: 999px !important;
+}
+
+/* Reviews slider */
+.testimonial-slider{ margin: 18px auto; padding: 18px; }
+.review-card{
+  background: rgba(0,0,0,.18);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.reviewer-info img{
+  border-radius: 999px;
+  border: 2px solid rgba(255,255,255,.14);
+}
+.rating{ color: #ffd700; }
+.review-meta{ color: rgba(238,241,255,.65); }
+
+/* Slider controls */
+.slider-controls button{
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+  padding: 10px 14px;
+}
+
+/* Stats */
+.stats-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.stat-item{
+  background: rgba(0,0,0,.18);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.stat-number{ color: #b7b0ff; }
+
+/* Bonus rules */
+.rules-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 14px 0;
+}
+.rule-category, .wagering-info, .important-notes, .security-content{
+  background: rgba(0,0,0,.18);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.rule-category h3{ color: #b7b0ff; }
+.example{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  margin-top: 10px;
+}
+
+/* Support */
+.channels-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 14px 0;
+}
+.channel-card{
+  background: rgba(0,0,0,.18);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.channel-card:hover{ transform: translateY(-3px); }
+.availability, .response-time{ color: rgba(238,241,255,.65); }
+.chat-btn, .tg-btn, .email-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: linear-gradient(90deg, rgba(34,211,238,.65), rgba(108,92,255,.60));
+  color: var(--text);
+  text-decoration:none;
+}
+
+/* FAQ */
+.faq-item{
+  background: rgba(0,0,0,.18);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius);
+}
+.faq-question{
+  font-weight: 700;
+}
+
+/* Footer */
+.footer{
+  max-width: var(--container);
+  margin: 26px auto 32px;
+  padding: 22px 18px;
+  border-radius: var(--radius);
+  background: rgba(10, 10, 18, .55);
+  border: 1px solid var(--border);
+  text-align:center;
+}
+.footer p{ color: rgba(238,241,255,.7); margin-bottom: 10px; }
+.footer nav{ justify-content:center; }
+
+/* Back-to-top */
+#back-to-top{
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  display: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .header{ flex-direction: column; align-items: stretch; }
+  nav{ justify-content:center; }
+  .btn{ width: 100%; }
+  main{ padding: 0 10px; }
+}
+
+/* =================== LAYOUT POLISH v2 (NO SEO/LINK CHANGES) =================== */
+
+/* Container / spacing */
+main{
+  max-width: var(--container, 1080px);
+  margin: 0 auto;
+  padding: 0 14px;
+}
+.hero, .glass-block, .table-section, .support-channels, .faq-section, .stats-section,
+.testimonial-slider, .bonus-rules, .security-info{
+  margin: 18px auto !important;
+}
+.hero{ padding: 26px 18px !important; }
+.glass-block, .table-section, .support-channels, .faq-section, .bonus-rules, .security-info{
+  padding: 22px 18px !important;
+}
+.hero p, .glass-block p, .table-section p{
+  margin: 10px auto;
+  max-width: 920px;
+}
+
+/* Header/logo: prevent squish */
+.header{ gap: 12px; }
+.logo{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.logo img{
+  width: auto !important;
+  height: auto !important;
+  max-height: 56px !important;
+  max-width: 220px !important;
+  object-fit: contain !important;
+}
+
+/* Buttons: keep one-line on desktop, allow wrap on small screens */
+.btn{
+  line-height: 1.15;
+  max-width: 100%;
+}
+@media (min-width: 520px){
+  .btn{ white-space: nowrap; }
+}
+@media (max-width: 519px){
+  .btn{ white-space: normal; }
+}
+
+/* Bonus rules grid: equal heights + nicer list spacing */
+.rules-grid{
+  gap: 16px !important;
+}
+.rule-category, .wagering-info, .important-notes, .security-content{
+  height: 100%;
+}
+.rule-category ul{ margin-top: 10px; padding-left: 18px; }
+.rule-category li{ margin: 8px 0; }
+
+/* Tables: never break layout */
+table{
+  display:block;
+  width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling: touch;
+}
+th, td{ white-space: nowrap; }
+@media (max-width: 768px){
+  th, td{ white-space: normal; }
+}
+
+/* Support page: cards/grid */
+.channels-grid{
+  display:grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 16px !important;
+  margin-top: 16px !important;
+}
+.channel-card{
+  padding: 18px !important;
+}
+.channel-info h3{ margin: 0 0 8px 0; }
+.availability, .response-time{
+  display:block;
+  margin-top: 8px;
+  opacity: .85;
+}
+
+/* FAQ: clean accordion look */
+.faq-list{
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+.faq-item{ border-radius: 16px !important; }
+.faq-question{
+  padding: 16px 16px !important;
+  font-size: 1.05rem !important;
+  line-height: 1.3;
+  gap: 12px;
+}
+.faq-question span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  flex: 0 0 auto;
+}
+.faq-answer{
+  padding: 0 16px 16px !important;
+}
+.faq-answer p{ margin: 10px 0 8px; }
+.faq-answer ul{ margin-top: 8px; padding-left: 18px; }
+.faq-answer li{ margin: 6px 0; }
+
+/* Reviews slider: ADD missing layout styles to avoid overlap */
+.testimonial-slider{ padding: 0 0 6px; }
+.slider-container{
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.slide{ display: none; }
+.slide.active{ display: block; }
+.review-card{ width: 100%; }
+.reviewer-info{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+/* Hide avatars as requested */
+.reviewer-info img{ display:none !important; }
+
+/* Slider controls: centered and consistent */
+.slider-controls{
+  display:flex;
+  justify-content:center;
+  gap: 12px;
+  margin-top: 14px;
+}
+.prev-btn, .next-btn{
+  border-radius: 12px !important;
+}
+
+/* Mobile: breathing room and header layout */
+@media (max-width: 768px){
+  main{ padding: 0 10px; }
+  .header{ flex-direction: column; align-items: stretch; }
+  nav{ justify-content:center; flex-wrap: wrap; }
+  .hero{ padding: 20px 14px !important; }
+}
+
+/* =================== PATCH v4 (support/faq/reviews only; NO SEO/LINK CHANGES) =================== */
+
+/* Support cards: perfect alignment */
+.channels-grid{
+  display:grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 20px !important;
+  align-items: stretch !important;
+}
+.channel-card{
+  display:flex !important;
+  flex-direction:column !important;
+  height:100% !important;
+  padding: 20px !important;
+}
+.channel-card .channel-info{ flex:1 1 auto !important; }
+.channel-card a{
+  margin-top:auto !important;
+  align-self:flex-start !important;
+}
+
+/* FAQ: remove white button look, make it match dark/glass */
+.faq-question{
+  width:100% !important;
+  background: rgba(255,255,255,.045) !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  color:#fff !important;
+  border-radius: 14px !important;
+  padding: 16px 16px !important;
+  text-align:left !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap: 14px !important;
+}
+.faq-question:hover{
+  background: rgba(255,255,255,.065) !important;
+}
+.faq-question span{
+  background: rgba(39,167,231,.16) !important;
+  border: 1px solid rgba(39,167,231,.30) !important;
+  color:#fff !important;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 12px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  flex:0 0 auto !important;
+}
+.faq-answer{
+  padding: 0 16px 16px !important;
+}
+.faq-item{ overflow:hidden !important; }
+
+/* Reviews: stack all reviews vertically, prevent overlap */
+.slider-container{
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  display:flex !important;
+  flex-direction:column !important;
+  gap: 18px !important;
+}
+.slide{ display:block !important; }
+.slide.active{ display:block !important; }
+.review-card{ width:100% !important; }
+.reviewer-info img{ display:none !important; }
+
+/* Buttons on reviews: keep for look but disable clicks */
+.slider-controls button{
+  pointer-events:none !important;
+  opacity:.55 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .channels-grid{ grid-template-columns: 1fr !important; }
+}

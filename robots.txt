@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Указываем путь к sitemap.xml
-Sitemap: https://luckybears.ru/sitemap.xml
+Sitemap: https://luckybearz.ru/sitemap.xml
 
 # Host для Яндекса
-Host: luckybears.ru
+Host: luckybearz.ru
